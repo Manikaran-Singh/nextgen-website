@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BRUTALIST® — Not made to fit in</title>
+<meta name="description" content="BRUTALIST is an experimental luxury commerce experience: streetwear, footwear, accessories and objects.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pre" aria-hidden="true"><div class="pre-word" id="preWord"></div><div class="pre-bar"><i id="preBar"></i></div><b id="prePct">0%</b></div>
+<div id="cur" aria-hidden="true"></div>
+
+<header class="top">
+  <a href="#top" class="logo">BRUTALIST®</a>
+  <nav class="dnav" aria-label="Main">
+    <a href="#shop" data-cat="All">Shop</a><a href="#cats">Collections</a><a href="#shop" data-new="1">New arrivals</a><a href="#about">About</a>
+  </nav>
+  <div class="tools">
+    <button id="sBtn" aria-label="Search">Search</button>
+    <button id="wBtn" aria-label="Wishlist">Wishlist <sup id="wN">0</sup></button>
+    <button id="cBtn" aria-label="Open bag">Bag <sup id="cN">0</sup></button>
+    <button id="mBtn" class="burger" aria-label="Menu" aria-expanded="false">Menu</button>
+  </div>
+</header>
+
+<div id="menu" class="menu" hidden>
+  <a href="#shop">Shop</a><a href="#cats">Collections</a><a href="#shop" data-new="1">New arrivals</a><a href="#about">About</a>
+</div>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-img" id="heroImg"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1400&q=70" alt="Model in black tailoring" onerror="this.remove()"></div>
+  <div class="orange"></div>
+  <h1><span class="l">NOT MADE</span><span class="l">TO FIT IN.</span></h1>
+  <p class="hero-copy">Objects. Essentials. Statements. A different perspective on everyday style.</p>
+  <div class="cta"><a class="btn mag" href="#shop">Explore collection</a><a class="btn alt mag" href="#shop" data-new="1">Discover the drop</a></div>
+  <span class="tag t1">Collection 001, 2026</span><span class="tag t2">Free shipping over ₹5,000</span>
+  <div class="scrollcue">scroll</div>
+</section>
+
+<div class="marquee" aria-hidden="true"><div><span>BREAK THE RULES • NEW DROP • NO GRID • NO APOLOGIES • </span><span>BREAK THE RULES • NEW DROP • NO GRID • NO APOLOGIES • </span></div></div>
+
+<section id="cats" class="cats">
+  <button class="cat c1" data-cat="Streetwear"><span>STREET<br>WEAR</span></button>
+  <button class="cat c2" data-cat="Essentials"><span>ESSEN<br>TIALS</span></button>
+  <button class="cat c3" data-cat="Footwear"><span>FOOT<br>WEAR</span></button>
+  <button class="cat c4" data-cat="Accessories"><span>ACCESS<br>ORIES</span></button>
+  <button class="cat c5" data-cat="Objects"><span>OBJECTS</span></button>
+</section>
+
+<section id="shop" class="shop">
+  <h2 class="big">NEW DROP.</h2>
+  <div class="bar">
+    <div class="chips" id="chips"></div>
+    <label>Max price <output id="pOut"></output><input id="price" type="range" min="1000" max="9000" step="500" value="9000"></label>
+    <label><input id="inStock" type="checkbox"> In stock</label>
+    <label><input id="onlyNew" type="checkbox"> New only</label>
+    <label>Sort <select id="sort"><option value="f">Featured</option><option value="l">Price low to high</option><option value="h">Price high to low</option><option value="n">Newest</option></select></label>
+  </div>
+  <div id="grid" class="grid"></div>
+</section>
+
+<section id="about" class="about">
+  <h2 class="big">WE DON'T FOLLOW THE GRID. WE BREAK IT.</h2>
+  <p>BRUTALIST makes clothing and objects for people who find the standard answer boring. Heavy materials, honest construction, small runs. Nothing is designed to blend in.</p>
+  <div class="stats"><div><b>12</b>Limited drops</div><div><b>480</b>Pieces per run</div><div><b>0</b>Restocks</div></div>
+  <a class="btn mag" href="#shop">Explore collections</a>
+</section>
+</main>
+
+<footer>
+  <div class="foot-logo">BRUTALIST®</div>
+  <form id="news" class="news"><label for="nm">Join the next drop</label><input id="nm" type="email" placeholder="you@email.com" required><button class="btn">Subscribe</button></form>
+  <nav aria-label="Footer"><a href="#top">Instagram</a><a href="#top">Contact</a><a href="#about">About</a><a href="#top">Shipping policy</a><a href="#top">Returns</a><a href="#top">Privacy</a><a href="#top">Terms</a></nav>
+  <small>Demo storefront. Payments are simulated and no real orders are placed.</small>
+</footer>
+
+<nav class="bnav" aria-label="Mobile"><a href="#top">Home</a><a href="#shop">Shop</a><a href="#shop" id="bW">Wishlist</a><a href="#" id="bB">Bag</a></nav>
+
+<div id="ov" class="ov" hidden></div>
+<aside id="drawer" class="drawer" aria-label="Shopping bag" aria-hidden="true"></aside>
+<dialog id="qv"></dialog>
+<div id="srch" class="srch" hidden><button id="sx" aria-label="Close search">Close</button><input id="sq" type="search" placeholder="Search jackets, sneakers, watches" aria-label="Search products"><div id="sug"></div></div>
+<div id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
